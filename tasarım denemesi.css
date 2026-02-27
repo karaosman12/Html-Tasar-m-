@@ -1,0 +1,255 @@
+body {
+    margin: 0;/*body'nin varsayılan marginini kaldırmak için*/
+    background-color: rgb(185, 240, 240);/*body'nin arka plan rengini ayarlamak için*/
+}
+
+header {
+    margin-top: 30px;/*header'ın üst kısmına boşluk eklemek için*/
+    padding: 0 50px;/*header'ın sağ ve sol tarafına boşluk eklemek için*/   
+    border-top: 2px solid #000000;/*header'ın üst kısmına kenarlık eklemek için*/
+    border-bottom: 2px solid #000000;/*header'ın alt kısmına kenarl2k eklemek için*/
+}
+nav {
+    background-color: #f8f8f8;/*nav'un arka plan rengini ayarlamak için*/
+    padding: 10px 0;/*nav'un üst ve alt kısmına boşluk eklemek için*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);/*nav'a gölge efekti eklemek için*/
+    border: 1px solid #ddd;/*nav'a kenarlık eklemek için*/
+}
+
+nav ul {
+    display: flex;/*nav içindeki liste elemanlarını yatay olarak sıralamak için*/
+    list-style: none;/*nav içindeki liste elemanlarını yatay olarak sıralamak için*/
+    gap: 20px;/*nav içindeki liste elemanları arasına boşluk eklemek için*/
+    justify-content: center;/*nav'u ortalamak için*/
+
+}
+nav ul li {
+    font-size: 18px;/*nav içindeki liste elemanlarının yazı boyutunu ayarlamak için*/
+    font-weight: bold;/*nav içindeki liste elemanlarının yazı kalınlığını ayarlamak için*/
+    color: #333;/*nav içindeki liste elemanlarının yazı rengini ayarlamak için*/
+    cursor: pointer;/*nav içindeki liste elemanlarının üzerine gelindiğinde imlecin değişmesini sağlamak için*/
+}
+
+nav ul li a {
+    text-decoration: none;/*nav içindeki liste elemanlarının altını çizmemek için*/
+    color: inherit;/*nav içindeki liste elemanlarının yazı rengini kalıtım yoluyla almak için*/
+    
+}
+
+nav ul li a:hover {
+    color: #007BFF;/*nav içindeki liste elemanlarının üzerine gelindiğinde yazı rengini değiştirmek için*/
+    font-weight: bold;/*nav içindeki liste elemanlarının üzerine gelindiğinde yazı kalınlığını değiştirmek için*/
+
+}
+
+.hero {
+    margin: 50px;/*hero bölümünün çevresine boşluk eklemek için*/
+    margin-top: 0;/*hero bölümünün üst kısmındaki boşluğu kaldırmak için*/
+    display: flex;/*hero bölümünü esnek kutu düzeni yapmak için*/
+    align-items: center;/*hero bölümündeki öğeleri dikey olarak ortalamak için*/
+    padding: 50px;/*hero bölümüne iç boşluk eklemek için*/
+    background-color: #e0e0e0;/*hero bölümünün arka plan rengini ayarlamak için*/
+    margin-bottom: 0;/*hero bölümünün alt kısmındaki boşluğu kaldırmak için*/
+}
+.hero a {
+    color: #007BFF;
+    text-decoration: none;/*hero bölümündeki bağlantının altını çizmemek için*/
+    font-weight: bold;/*hero bölümündeki bağlantının yazı kalınlığını ayarlamak için*/
+}
+
+.hero a:hover {
+    color: #0356af;/*hero bölümündeki bağlantının üzerine gelindiğinde yazı rengini değiştirmek için*/
+    text-decoration: underline;/*hero bölümündeki bağlantının üzerine gelindiğinde altını çizmek için*/
+}
+
+.features {
+    margin: 0 50px;/*features bölümünün çevresine boşluk eklemek için*/
+    display: flex;/*features bölümünü esnek kutu düzeni yapmak için*/
+    flex-wrap: wrap;           /* 3’ten fazlası alta insin */
+    justify-content: center;   /* Alta geçenler ortalansın */
+    gap: 20px;/*features bölümündeki öğeler arasına boşluk eklemek için*/
+    padding: 50px;/*features bölümüne iç boşluk eklemek için*/
+    background-color: #f0f0f0;/*features bölümünün arka plan rengini ayarlamak için*/
+    transition: 0.3s ease;/*features bölümündeki öğelerin üzerine gelindiğinde geçiş efekti eklemek için*/
+
+}
+.feature:hover { /*features bölümündeki öğelerin üzerine gelindiğinde uygulanacak stil*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/*features bölümündeki öğelerin üzerine gelindiğinde gölge efekti eklemek için*/
+}
+
+.feature{
+    flex: 0 0 calc(33.333% - 20px); /* En fazla 3 tane */
+    box-sizing: border-box;/*features bölümündeki öğelerin genişliğini hesaplamak için, böylece boşluklar da dahil edilir*/
+    padding: 20px;/*features bölümündeki öğelere iç boşluk eklemek için*/
+    border: 1px solid #ddd;/*features bölümündeki öğelere kenarlık eklemek için*/
+    border-radius: 10px;/*features bölümündeki öğelerin köşelerini yuvarlamak için*/
+}
+
+
+.detaylıiçerik {
+    margin: 0 50px;/*detaylı içerik bölümünün çevresine boşluk eklemek için*/
+    padding: 50px;/*detaylı içerik bölümüne iç boşluk eklemek için*/
+    background-color: #e0e0e0;/*detaylı içerik bölümünün arka plan rengini ayarlamak için*/
+    margin-top: 0;/*detaylı içerik bölümünün üst kısmındaki boşluğu kaldırmak için*/
+    display: flex;/*detaylı içerik bölümünü esnek kutu düzeni yapmak için*/
+    align-items: center;/*detaylı içerik bölümündeki öğeleri dikey olarak ortalamak için*/
+}
+
+.dtyiçerikimg {
+  flex: 0 0 30%;  /*resim kısmının genişliğini belirlemek için, burada %30 olarak ayarlanmıştır*/
+  margin-right: 20px;/*resim kısmı ile metin kısmı arasına boşluk eklemek için*/
+
+}
+.dtyiçerikimg img {
+    width: 100%;/*resmin kapsayıcıya tam oturmasını sağlamak için*/
+    height: 100%;/*resmin kapsayıcıya tam oturmasını sağlamak için*/
+    object-fit: cover;/*resmin kapsayıcıya tam oturmasını sağlamak için*/
+}
+
+.dtyiçerikmetin {
+    flex: 1; /* Kalan alanı kapla */
+    padding: 20px;/*detaylı içerik bölümündeki metin kısmına iç boşluk eklemek için*/
+    min-width: 0;/*metin kısmının minimum genişliğini sıfırlamak için, böylece esnek kutu düzeni düzgün çalışır*/
+}
+
+.dtyiçerikmetin p {
+        font-size: clamp(14px, 1vw, 16px);/*detaylı içerik bölümündeki paragrafların yazı boyutunu ayarlamak için*/
+}
+
+footer {
+    text-align: center;/*footer içindeki metni ortalamak için*/
+    padding: 20px;/*footer'a iç boşluk eklemek için*/
+    background-color: #f8f8f8;/*footer'ın arka plan rengini ayarlamak için*/
+    border-top: 1px solid #ddd;/*footer'ın üst kısmına kenarlık eklemek için*/
+    margin: 0 50px;/*footer'ın çevresine boşluk eklemek için*/
+}
+
+.text {
+    display: -webkit-box;/*text sınıfına sahip öğeleri başlangıçta gizlemek için*/
+    -webkit-line-clamp: 1;/*text sınıfına sahip öğelerin maksimum satır sayısını ayarlamak için*/
+    line-clamp: 1;/*text sınıfına sahip öğelerin maksimum satır sayısını ayarlamak için, standart olmayan özellik*/
+    -webkit-box-orient: vertical;/*text sınıfına sahip öğelerin dikey olarak sıralanmasını sağlamak için*/
+    overflow: hidden;/*text sınıfına sahip öğelerin taşan kısmını gizlemek için*/
+    margin-top: 20px;/*text sınıfına sahip öğelerin üst kısmına boşluk eklemek için*/
+    font-size: 16px;/*text sınıfına sahip öğelerin yazı boyutunu ayarlamak için*/
+    color: #333;/*text sınıfına sahip öğelerin yazı rengini ayarlamak için*/
+}
+
+#toggle:checked ~ .text {
+    -webkit-line-clamp: unset;/*toggle checkbox işaretlendiğinde text sınıfına sahip öğelerin satır sayısı kısıtlamasını kaldırmak için*/
+    line-clamp: unset;/*toggle checkbox işaretlendiğinde text sınıfına sahip öğelerin satır sayısı kısıtlamasını kaldırmak için, standart olmayan özellik*/
+}
+
+.btnn {
+    display: inline-block;/*btn sınıfına sahip öğeleri satır içi blok düzeneği yapmak için*/
+    padding: 10px 20px;/*btn sınıfına sahip öğelere iç boşluk eklemek için*/
+    background-color: #007BFF;/*btn sınıfına sahip öğelerin arka plan rengini ayarlamak için*/
+    color: #fff;/*btn sınıfına sahip öğelerin yazı rengini ayarlamak için*/
+    border: none;/*btn sınıfına sahip öğelerin kenarlığını kaldırmak için*/
+    border-radius: 5px;/*btn sınıfına sahip öğelerin köşelerini yuvarlamak için*/
+    font-size: 16px;/*btn sınıfına sahip öğelerin yazı boyutunu ayarlamak için*/
+    cursor: pointer;/*btn sınıfına sahip öğelerin üzerine gelindiğinde imlecin değişmesini sağlamak için*/
+    text-decoration: none;/*btn sınıfına sahip öğelerin altını çizmemek için*/
+}
+
+/* Checkbox gizli */
+#toggle {/*toggle checkbox'un görünmesini engellemek için*/
+    display: none;/*toggle checkbox'un görünmesini engellemek için*/
+}
+/* Başlangıçta sadece open yazısı görünür */
+.close-text {/*close-text sınıfına sahip öğelerin başlangıçta görünmesini sağlamak için*/
+    display: none;/*close-text sınıfına sahip öğelerin başlangıçta gizlenmesini sağlamak için*/
+}
+
+/* Checkbox açıkken yazıyı değiştir */
+#toggle:checked ~ .btnn .open-text {/*toggle checkbox işaretlendiğinde open-text sınıfına sahip öğelerin görünmesini sağlamak için*/
+    display: none;/*toggle checkbox işaretlendiğinde open-text sınıfına sahip öğelerin gizlenmesini sağlamak için*/
+}
+
+#toggle:checked ~ .btnn .close-text {/*toggle checkbox işaretlendiğinde open-text sınıfına sahip öğelerin gizlenmesini sağlamak için*/
+    display: inline;/*toggle checkbox işaretlendiğinde close-text sınıfına sahip öğelerin görünmesini sağlamak için*/
+}
+
+.açılırtexte {
+    margin: 0 50px;/*açılır texte bölümünün çevresine boşluk eklemek için*/
+    padding: 50px;/*açılır texte bölümüne iç boşluk eklemek için*/
+    background-color: #e0e0e0;/*açılır texte bölümünün arka plan rengini ayarlamak için*/
+    margin-top: 0;/*açılır texte bölümünün üst kısmındaki boşluğu kaldırmak için*/
+    display: flex;/*açılır texte bölümünü esnek kutu düzeni yapmak için*/
+    align-items: center;/*açılır texte bölümündeki öğeleri dikey olarak ortalamak için*/
+}
+
+/*login ve register sayfaları için ortak stiller*/
+.login {
+    max-width: 550px;/*login ve register sayfalarının maksimum genişliğini ayarlamak için*/
+    min-width: 450px;
+    margin: 150px auto 0 auto;
+    padding: 20px;/*login ve register sayfalarına iç boşluk eklemek için*/
+    border: 1px solid #ddd;/*login ve register sayfalarına kenarlık eklemek için*/
+    border-radius: 10px;/*login ve register sayfalarının köşelerini yuvarlamak için*/  
+    background: rgba(254, 254, 254, 0.3);/*login ve register sayfalarının arka plan rengini ayarlamak için*/
+    backdrop-filter: inherit;/*login ve register sayfalarının arka planına bulanıklık efekti eklemek için*/
+    -webkit-backdrop-filter: inherit;/*login ve register sayfalarının arka planına bulanıklık efekti eklemek için, Safari tarayıcıları için*/
+}
+
+.login h2{
+    text-align: center;/*login ve register sayfalarındaki başlıkları ortalamak için*/
+    margin-bottom: 20px;/*login ve register sayfalarındaki başlık ile diğer öğeler arasına boşluk eklemek için*/
+}
+
+form {
+    min-width: 350px;/*formun minimum genişliğini ayarlamak için*/
+    max-width: 400px;/*formun maksimum genişliğini ayarlamak için*/
+    margin: 50px auto;/*formu sayfanın ortasına yerleştirmek için*/
+    padding: 20px;/*form'a iç boşluk eklemek için*/
+    background-color: #f0f0f0;/*form'un arka plan rengini ayarlamak için*/
+    border: 1px solid #ddd;/*form'a kenarlık eklemek için*/
+    border-radius: 10px;/*form'un köşelerini yuvarlamak için*/
+    padding-bottom: 60px;/*form'un alt kısmına ekstra boşluk eklemek için, böylece içerik taşmaz*/
+    position: relative;/*form'un konumunu göreceli olarak ayarlamak için, böylece butonun konumu formun içinde kalır*/
+    
+}
+
+form h2 {
+    text-align: center;/*form başlığını ortalamak için*/
+    margin-bottom: 20px;/*form başlığı ile diğer öğeler arasına boşluk eklemek için*/
+}
+
+form label {
+    display: block;/*form etiketlerini blok düzeneği yapmak için*/
+    margin-bottom: 5px;/*form etiketleri ile giriş alanları arasına boşluk eklemek için*/
+    font-weight: bold;/*form etiketlerinin yazı kalınlığını ayarlamak için*/
+
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 90%;/*form giriş alanlarının genişliğini ayarlamak için*/
+    padding: 10px;/*form giriş alanlarına iç boşluk eklemek için*/
+    margin-bottom: 20px;/*form giriş alanları ile diğer öğeler arasına boşluk eklemek için*/
+    border: 1px solid #ddd;/*form giriş alanlarına kenarlık eklemek için*/
+    border-radius: 5px;/*form giriş alanlarının köşelerini yuvarlamak için*/
+
+}
+
+form button {
+    width: 70px;/*form butonunun genişliğini ayarlamak için*/
+    padding: 10px;/*form butonuna iç boşluk eklemek için*/
+    background-color: #007BFF;/*form butonunun arka plan rengini ayarlamak için*/
+    color: #fff;/*form butonunun yazı rengini ayarlamak için*/
+    border: none;/*form butonunun kenarlığını kaldırmak için*/
+    border-radius: 5px;/*form butonunun köşelerini yuvarlamak için*/
+    font-size: 16px;/*form butonunun yazı boyutunu ayarlamak için*/
+    cursor: pointer;/*form butonunun üzerine gelindiğinde imlecin değişmesini sağlamak için*/
+    position: absolute;/*form butonunun konumunu mutlak olarak ayarlamak için, böylece formun sağ alt köşesine yerleştirebiliriz*/
+    bottom: 20px;/*form butonunun alt kısmına boşluk eklemek için, böylece formun altından biraz yukarıda kalır*/
+    right: 35px;/*form butonunun sağ kısmına boşluk eklemek için, böylece formun sağından biraz içeride kalır*/
+
+
+}
+
+form button:hover {
+    background-color: #0356af;/*form butonunun üzerine gelindiğinde arka plan rengini değiştirmek için*/
+}
+
